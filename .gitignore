@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build artifacts
+build/
+.build/
+*.app/
+*.dmg
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# Local data & backups
+*.json
+!Package.swift
