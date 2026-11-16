@@ -1,17 +1,8 @@
 # 🎓 UniFlow — Il tuo ecosistema universitario (Sapienza Farmacia)
 
-> **Un'applicazione nativa per macOS (Apple Silicon M2 / SwiftUI)** progettata su misura per gli studenti della facoltà di **Farmacia della Sapienza Università di Roma**: lezioni tra gli edifici CU019, CU014 e CU026, piano di studi da 300 CFU, appunti con modelli di laboratorio galenico e schede farmaco, trasporti romani (Metro B Policlinico, Tram 3/19, Bus Atac) e sessioni di studio con pause rigeneranti e motivazioni personalizzate.
+> **Un'applicazione nativa per macOS (Apple Silicon M2 / SwiftUI)** progettata su misura per gli studenti della facoltà di **Farmacia**: lezioni tra gli edifici CU019, CU034, piano di studi da 300 CFU, trasporti (Metro B Policlinico, Tram 3/19, Bus Atac) e sessioni di studio con pause rigeneranti e motivazioni personalizzate.
 
 ---
-
-## ✨ Funzionalità su Misura per Farmacia Sapienza
-
-### 1. 📋 Questionario Iniziale di Onboarding (Ottimizzato e Corretto)
-- **Risolto il bug visivo della schermata pendolari**: il selettore dei mezzi è ora strutturato su una comoda griglia a schede dinamiche (*Metro B Policlinico*, *Tram 3/19 Regina Elena*, *Bus Atac 310/492*, *Treno FL1/FL2*, *Auto/Scooter*, *Bici/A piedi*) che non viene mai tagliata o compressa su schermi MacBook.
-- **Pre-configurazione Farmacia Sapienza**:
-  - Ateneo: *Sapienza Università di Roma*
-  - Corso: *Farmacia (Ciclo Unico LM-13 - 300 CFU)*
-  - Target Laurea e ore di studio giornaliere configurabili.
 
 ### 2. 📝 Gestione Appunti con Modelli di Farmacia
 - Pulsante dedicato in evidenza **`+ Nuovo Appunto`** (`AddNoteSheet`) accessibile sempre dalla barra laterale e con <kbd>⌘</kbd> + <kbd>N</kbd>.
@@ -60,9 +51,3 @@
 | <kbd>⌘</kbd> + <kbd>T</kbd> | Nuova Scadenza |
 
 ---
-
-## 🚀 Avvio Rapido
-
-```bash
-open /Users/aldocuko/.gemini/antigravity/scratch/uniflow/build/UniFlow.app
-```
