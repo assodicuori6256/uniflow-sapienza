@@ -495,6 +495,24 @@ public struct AppSettings: Codable, Equatable {
     }
 }
 
+// MARK: - Professor
+
+public struct Professor: Identifiable, Codable, Equatable, Hashable {
+    public var id: UUID
+    public var name: String
+    public var email: String
+    public var officeHours: String // orario di ricevimento
+    public var department: String
+    
+    public init(id: UUID = UUID(), name: String, email: String = "", officeHours: String = "", department: String = "Farmacia e Medicina") {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.officeHours = officeHours
+        self.department = department
+    }
+}
+
 // MARK: - Color Extension for Hex
 extension Color {
     public init(hex: String) {

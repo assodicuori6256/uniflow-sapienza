@@ -15,6 +15,7 @@ public struct UniFlowArchive: Codable {
     public var busLines: [BusLine] = []
     public var studySessions: [StudySession]
     public var motivations: [StudyMotivation] = []
+    public var professors: [Professor] = []
 }
 
 @MainActor
@@ -29,6 +30,7 @@ public class DataStore: ObservableObject {
     @Published public var busLines: [BusLine] = []
     @Published public var studySessions: [StudySession] = []
     @Published public var motivations: [StudyMotivation] = []
+    @Published public var professors: [Professor] = []
     
     @Published public var selectedNavigationItem: NavigationCategory? = .dashboard
     
@@ -177,6 +179,16 @@ public class DataStore: ObservableObject {
     public func updateCourse(_ course: Course) {
         if let idx = courses.firstIndex(where: { $0.id == course.id }) {
             courses[idx] = course
+            saveData()
+        }
+    }
+    
+    public func updateProfessor(forCourseId courseId: UUID, professor: String, email: String = "") {
+        if let idx = courses.firstIndex(where: { $0.id == courseId }) {
+            courses[idx].professor = professor
+            if !email.isEmpty {
+                courses[idx].professorEmail = email
+            }
             saveData()
         }
     }
