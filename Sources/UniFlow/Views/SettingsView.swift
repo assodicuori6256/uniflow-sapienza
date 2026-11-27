@@ -98,9 +98,7 @@ public struct SettingsView: View {
                             Button(action: {
                                 if let json = store.exportArchiveJSON() {
                                     vm.exportedJSON = json
-                                    let pb = NSPasteboard.general
-                                    pb.clearContents()
-                                    pb.setString(json, forType: .string)
+                                    copyToClipboard(json)
                                     vm.showingExportModal = true
                                 }
                             }) {
@@ -128,6 +126,63 @@ public struct SettingsView: View {
                     .cornerRadius(12)
                 }
                 
+                // Developer & Support Section
+                VStack(alignment: .leading, spacing: 14) {
+                    Text("Sviluppatore & Supporto")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 12) {
+                            Image(systemName: "person.crop.circle.badge.checkmark")
+                                .font(.system(size: 32))
+                                .foregroundColor(.blue)
+                            
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text("Aldo Cuko")
+                                    .font(.headline)
+                                Text("Sviluppatore di UniFlow per gli studenti di Farmacia della Sapienza")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        
+                        Divider()
+                        
+                        HStack(spacing: 14) {
+                            if let emailURL = URL(string: "mailto:aldo.superiori@gmail.com") {
+                                Link(destination: emailURL) {
+                                    Label("aldo.superiori@gmail.com", systemImage: "envelope.fill")
+                                        .font(.system(size: 13, weight: .medium))
+                                }
+                                .buttonStyle(.bordered)
+                            }
+                            
+                            if let ghURL = URL(string: "https://github.com/assodicuori6256/uniflow-sapienza") {
+                                Link(destination: ghURL) {
+                                    Label("GitHub Repository", systemImage: "link.circle.fill")
+                                        .font(.system(size: 13, weight: .medium))
+                                }
+                                .buttonStyle(.borderedProminent)
+                                .tint(.black)
+                            }
+                        }
+                        
+                        HStack(spacing: 8) {
+                            Image(systemName: "checkmark.seal.fill")
+                                .foregroundColor(.green)
+                                .font(.caption)
+                            Text("Supporto multi-piattaforma nativo per macOS (MacBook M2 & Intel), iOS (iPhone) e iPadOS (iPad).")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.top, 4)
+                    }
+                    .padding(16)
+                    .background(Color(NSColor.controlBackgroundColor))
+                    .cornerRadius(12)
+                }
+                
                 // App Info
                 HStack(spacing: 12) {
                     Image(systemName: "laptopcomputer.and.ipad")
@@ -138,7 +193,7 @@ public struct SettingsView: View {
                         Text("UniFlow — Il tuo ecosistema universitario")
                             .font(.subheadline)
                             .fontWeight(.bold)
-                        Text("Versione 1.0.0 • Compilato nativamente per macOS Apple Silicon (M2)")
+                        Text("Versione 1.0.0 • Supporto Mac (M2), iPhone (iOS 16+) e iPad (iPadOS 16+)")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
@@ -188,7 +243,7 @@ public struct SettingsView: View {
                 .buttonStyle(.borderedProminent)
             }
             .padding(20)
-            .frame(width: 500, height: 400)
+            .macSheetFrame(width: 500, height: 400)
         }
     }
 }

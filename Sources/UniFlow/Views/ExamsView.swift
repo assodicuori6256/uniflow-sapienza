@@ -347,7 +347,7 @@ public struct AddExamSheet: View {
                         Text(course.name).tag(course.id)
                     }
                 }
-                .onChange(of: vm.selectedCourseId) { _, newId in
+                .onChange(of: vm.selectedCourseId) { newId in
                     if let c = store.course(for: newId) {
                         vm.cfu = c.cfu
                     }

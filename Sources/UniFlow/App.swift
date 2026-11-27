@@ -1,5 +1,10 @@
 import SwiftUI
+#if canImport(AppKit)
 import AppKit
+#endif
+#if canImport(UIKit)
+import UIKit
+#endif
 
 @main
 public struct UniFlowApp: App {
@@ -13,6 +18,7 @@ public struct UniFlowApp: App {
                 .environmentObject(store)
                 .navigationTitle("UniFlow")
         }
+        #if os(macOS)
         .windowStyle(.hiddenTitleBar)
         .commands {
             SidebarCommands()
@@ -66,5 +72,6 @@ public struct UniFlowApp: App {
                 .keyboardShortcut("7", modifiers: [.command])
             }
         }
+        #endif
     }
 }

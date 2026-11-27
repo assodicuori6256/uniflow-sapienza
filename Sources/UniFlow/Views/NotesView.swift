@@ -189,9 +189,7 @@ public struct NotesView: View {
                 Spacer()
                 
                 Button(action: {
-                    let pasteboard = NSPasteboard.general
-                    pasteboard.clearContents()
-                    pasteboard.setString(store.notes[index].content, forType: .string)
+                    copyToClipboard(store.notes[index].content)
                 }) {
                     Label("Copia", systemImage: "doc.on.doc")
                 }
@@ -297,7 +295,7 @@ public struct AddNoteSheet: View {
                         Text(t.0).tag(t.0)
                     }
                 }
-                .onChange(of: vm.selectedTemplate) { _, newTemplate in
+                .onChange(of: vm.selectedTemplate) { newTemplate in
                     applyTemplate(newTemplate)
                 }
                 

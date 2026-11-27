@@ -7,10 +7,9 @@ L'applicazione **UniFlow — Ecosistema Universitario per Sapienza Farmacia** è
 ---
 
 ### 1. Architettura Offline-First e Conservazione dei Dati
-- **Nessun Tracciamento Cloud**: UniFlow funziona al 100% in locale sul tuo Mac.
+- **Nessun Tracciamento Cloud**: UniFlow funziona al 100% in locale sul tuo dispositivo (Mac, iPhone o iPad).
 - **Nessun Server Centrale**: L'applicazione non dispone di server remoti proprietari e non invia informazioni sui tuoi voti, appunti, orari, nominativi o abitudini a terze parti.
-- **Archiviazione Locale Sicura**: Tutte le informazioni inserite (corsi, libretto esami, orari lezioni, note, scadenze e tratte dei mezzi di trasporto) vengono salvate esclusivamente sul disco locale del tuo dispositivo nella cartella protetta di sistema:
-  `~/Library/Application Support/UniFlow/uniflow_data.json`
+- **Archiviazione Locale Sicura**: Tutte le informazioni inserite (corsi, libretto esami, orari lezioni, note, scadenze e tratte dei mezzi di trasporto) vengono salvate esclusivamente sul disco locale del tuo dispositivo nella cartella protetta di sistema (Application Support / Sandbox).
 
 ---
 
@@ -30,7 +29,8 @@ L'applicazione **UniFlow — Ecosistema Universitario per Sapienza Farmacia** è
 
 ---
 
-### 5. Contatti e Supporto
-Per qualsiasi domanda tecnica o chiarimento sul funzionamento dell'applicazione:
-- **Repository GitHub**: [https://github.com/assodicuori6256/uniflow-sapienza](https://github.com/assodicuori6256/uniflow-sapienza)
-- **Email di Supporto**: aldocuko@gmail.com
+### 5. Sviluppatore, Contatti e Supporto
+Per qualsiasi domanda tecnica, richiesta o chiarimento sul funzionamento dell'applicazione:
+- **Sviluppatore**: Aldo Cuko
+- **Email di Contatto**: [aldo.superiori@gmail.com](mailto:aldo.superiori@gmail.com)
+- **Repository Ufficiale GitHub**: [https://github.com/assodicuori6256/uniflow-sapienza](https://github.com/assodicuori6256/uniflow-sapienza)

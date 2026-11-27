@@ -73,7 +73,9 @@ public struct OnboardingView: View {
                     .background(Color(NSColor.controlBackgroundColor))
             }
         }
+        #if os(macOS)
         .frame(minWidth: 720, minHeight: 650)
+        #endif
         .onAppear {
             if !store.settings.studentName.isEmpty {
                 vm.studentName = store.settings.studentName
@@ -419,9 +421,15 @@ public struct OnboardingView: View {
             .background(Color(NSColor.controlBackgroundColor))
             .cornerRadius(14)
             
-            Text("💡 UniFlow è già configurato con i corsi di Chimica Generale, Botanica, Chimica Organica, Anatomia e Galenica dell'Edificio CU019 Farmacia.")
-                .font(.caption)
-                .foregroundColor(.secondary)
+            HStack(spacing: 6) {
+                Text("UniFlow sviluppato da Aldo Cuko (aldo.superiori@gmail.com)")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
+                if let url = URL(string: "https://github.com/assodicuori6256/uniflow-sapienza") {
+                    Link("• GitHub", destination: url)
+                        .font(.caption2)
+                }
+            }
         }
     }
     

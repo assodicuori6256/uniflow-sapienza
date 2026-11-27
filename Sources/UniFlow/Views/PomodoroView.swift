@@ -83,7 +83,7 @@ public struct PomodoroView: View {
                 }
                 .pickerStyle(.segmented)
                 .frame(maxWidth: 420)
-                .onChange(of: vm.mode) { _, newMode in
+                .onChange(of: vm.mode) { newMode in
                     vm.isRunning = false
                     vm.timeRemaining = newMode.defaultDuration
                 }
@@ -362,7 +362,7 @@ public struct PomodoroView: View {
     }
     
     private func finishTimer() {
-        NSSound.beep()
+        playAlertSound()
         skipSession()
     }
 }
