@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Mac App Store Sandbox (Obbligatorio per tutte le app distribuite su Mac App Store) -->
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+    
+    <!-- Accesso di rete client per link esterni (Teams, Infostud, WeBeep, portali Sapienza) -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+    
+    <!-- Permesso di lettura/scrittura per i file di backup esportati dall'utente -->
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
+</dict>
+</plist>
