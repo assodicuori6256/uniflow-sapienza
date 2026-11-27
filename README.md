@@ -107,5 +107,5 @@ Oppure ricompilarla con lo script incluso:
    ```bash
    open Package.swift
    ```
-2. Nel selettore di destinazione in alto in Xcode, scegli il tuo dispositivo (**iPhone di Aldo** o un simulatore iPhone/iPad).
+2. Nel selettore di destinazione in alto in Xcode, scegli il tuo dispositivo (**iPhone** o un simulatore iPhone/iPad).
 3. Premi **Run (<kbd>⌘</kbd> + <kbd>R</kbd>)** per installare e avviare l'app direttamente sul telefono o tablet.
